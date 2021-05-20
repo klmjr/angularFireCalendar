@@ -1,0 +1,98 @@
+<div class="submit-form">
+    <div *ngIf="!submitted">
+      <div class="form-group">
+        <label for="home">Home</label>
+        <select name="Home" [(ngModel)]= "event.Home">
+            <option value="North Star">North Star</option>
+            <option value="Wedgewood">Wedgewood</option>
+            <option value="Skyline">Skyline</option>
+            <option value="Westminister">Westminster</option>
+            <option value="Delaware Bluefish">Delaware Bluefish</option>
+            <option value="Nottingham Green">Nottingham Green</option>
+            <option value="Western Y">Western Y</option>
+            <option value="Maple Valley">Maple Valley</option>
+            <option value="Persimmon Creek">Persimmon Creek</option>
+            <option value="Oaklands">Oaklands</option>
+            <option value="Yorklyn">Yorklyn</option>
+            <option value="Bear-Glasgow Y">Bear-Glasgow Y</option>
+            <option value="Penn Acres">Penn Acres</option>
+            <option value="Arundel">Arundel</option>
+            <option value="Crestmoor">Crestmoor</option>
+            <option value="Drummond Hill">Drummond Hill</option>
+            <option value="Oakwood Valley">Oakwood Valley</option>
+            <option value="Sherwood Park">Sherwood Park</option>
+            <option value="Valleybrook">Valleybrook</option>
+        </select>
+        
+  
+      </div>
+
+      <div class="form-group">
+        <label for="away">Away</label>
+        <select name="Home" [(ngModel)]= "event.Away">
+            <option value="North Star">North Star</option>
+            <option value="Wedgewood">Wedgewood</option>
+            <option value="Skyline">Skyline</option>
+            <option value="Westminister">Westminster</option>
+            <option value="Delaware Bluefish">Delaware Bluefish</option>
+            <option value="Nottingham Green">Nottingham Green</option>
+            <option value="Western Y">Western Y</option>
+            <option value="Maple Valley">Maple Valley</option>
+            <option value="Persimmon Creek">Persimmon Creek</option>
+            <option value="Oaklands">Oaklands</option>
+            <option value="Yorklyn">Yorklyn</option>
+            <option value="Bear-Glasgow Y">Bear-Glasgow Y</option>
+            <option value="Penn Acres">Penn Acres</option>
+            <option value="Arundel">Arundel</option>
+            <option value="Crestmoor">Crestmoor</option>
+            <option value="Drummond Hill">Drummond Hill</option>
+            <option value="Oakwood Valley">Oakwood Valley</option>
+            <option value="Sherwood Park">Sherwood Park</option>
+            <option value="Valleybrook">Valleybrook</option>
+        </select>
+      </div>
+      
+      <label for="title">Home Division</label>
+      <select name="Home" [(ngModel)]= "event.home_division">
+        <option value="Red">Red</option>
+        <option value="Blue">Blue</option>
+        <option value="White">White</option>
+    </select>
+    </div>
+
+    <div class="form-group">
+      <label for="title">Away Division</label>
+      <select name="Home" [(ngModel)]= "event.away_division">
+        <option value="Red">Red</option>
+        <option value="Blue">Blue</option>
+        <option value="White">White</option>
+    </select>
+    </div>
+    
+
+  
+      <div class="form-group">
+        <label for="start">Date</label>
+        <input
+            class="form-control"
+            type="text"
+            mwlFlatpickr
+            [(ngModel)]="event.start"
+            [altInput]="true"
+            [convertModelValue]="true"
+            [enableTime]="true"
+            
+            dateFormat="Y-m-dTH:i"
+            altFormat="F j, Y H:i"
+            placeholder="Not set"
+          />
+      </div>
+  
+      <button (click)="saveEvent()" class="btn btn-success">Submit</button>
+    </div>
+  
+    <div *ngIf="submitted">
+      <h4>You submitted successfully!</h4>
+      <button class="btn btn-success" (click)="newEvent()">Add</button>
+    </div>
+  </div>
